@@ -1,11 +1,10 @@
 describe('express app setup', () => {
-  const App = require('../app2').props({
-    http: {
-      createServer() {
-        return {on() {}, listen() {}};
-      }
+  const http = {
+    createServer() {
+      return {on() {}, listen() {}};
     }
-  });
+  };
+  const App = require('../app2').props({http});
 
   it('should share ./public', (done) => {
     const express = () => ({set() {}, use() {}});
