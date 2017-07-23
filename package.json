@@ -1,0 +1,27 @@
+{
+  "name": "fws-ep17",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./service.js",
+    "start2": "node ./service2.js",
+    "test": "npm run test-mocha && npm run test-jest && npm run test-jasmine",
+    "test-mocha": "mocha __tests__",
+    "test-jasmine": "jasmine-node --matchall __tests__",
+    "test-jest": "jest"
+  },
+  "dependencies": {
+    "@stamp/it": "^0.2.0",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.8.1"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "jest": "^20.0.4",
+    "mocha": "^3.4.2"
+  }
+}
